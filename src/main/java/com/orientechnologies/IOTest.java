@@ -1,6 +1,7 @@
 package com.orientechnologies;
 
 import com.orientechnologies.common.concur.ONeedRetryException;
+import com.orientechnologies.orient.core.Orient;
 import com.orientechnologies.orient.core.db.document.ODatabaseDocumentTx;
 import com.orientechnologies.orient.core.exception.ORecordNotFoundException;
 import com.orientechnologies.orient.core.metadata.schema.OClass;
@@ -111,13 +112,13 @@ public class IOTest {
     graphFactory.close();
     System.out.println("GrpahFactory was closed");
 
-    final ODatabaseDocumentTx db = new ODatabaseDocumentTx("plocal:" + DB_NAME);
-    db.open("admin", "admin");
-    final OLocalPaginatedStorage storage = (OLocalPaginatedStorage) db.getStorage();
-    db.close();
+    Orient.instance().shutdown();
+    System.out.println("Orient instance was shut down");
 
-    storage.close(true, false);
-    System.out.println("Storage is closed");
+    Orient.instance().startup();
+    Orient.instance().removeShutdownHook();
+
+    System.out.println("Orient instance was started");
 
     graphFactory = new OrientGraphFactory("plocal:" + DB_NAME);
     System.out.println("New GraphFactory instance was created");
