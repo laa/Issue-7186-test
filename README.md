@@ -17,8 +17,8 @@ Peform this step for all 104 edge types.
 
 All edges for all edge types are created concurrently in 8 threads.
 
-After insertion of 1 000 edges for each edge type (104 000 edges in total) close the storage and reopen it again.
-Repeat this step 1 000 times. So 104 000 000 of edges are created in total on this phase.
+After insertion of 10 000 edges for each edge type (104 000 edges in total) close the storage and reopen it again.
+Repeat this step 1 00 times. So 104 000 000 of edges are created in total on this phase.
 
 Phase 3.
 
@@ -39,7 +39,7 @@ Phase 5.
 
 Add 52 000 000 edges.
 For that add 500 000 edges for each edge type.
-Split process by batches in each butch add 1 000 edges for each edge type. At the end of each batch open and close storage.
-As result 500 batches are performed.
+Split process by batches in each butch add 10 000 edges for each edge type. At the end of each batch open and close storage.
+As result 50 batches are performed.
 
 Repeat phase 3 - 5 ten times.

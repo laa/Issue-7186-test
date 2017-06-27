@@ -169,7 +169,7 @@ public class IOTest {
     System.out.println("Phase 2 is started");
 
     final int batches = 100;
-    final int batchIterations = 10000;
+    final int batchIterations = 100;
 
     int counter = 0;
 
@@ -291,7 +291,7 @@ public class IOTest {
     System.out.println("Phase 5 is started");
 
     final int batches = 50;
-    final int batchIterations = 10000;
+    final int batchIterations = 100;
 
     int counter = 0;
 
